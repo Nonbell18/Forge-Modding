@@ -1,5 +1,7 @@
-package com.example.SimplyTech;
+package com.example.simplytech;
 
+import com.example.simplytech.block.ModBlocks;
+import com.example.simplytech.item.Moditems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,9 @@ public class SimplyTech {
     private static final Logger LOGGER = LogUtils.getLogger();
     public SimplyTech() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

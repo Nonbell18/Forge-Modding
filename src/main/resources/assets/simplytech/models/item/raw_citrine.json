@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "simplytech:item/raw_citrine"
+  }
+}
