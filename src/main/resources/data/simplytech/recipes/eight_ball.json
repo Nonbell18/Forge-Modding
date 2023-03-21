@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "simplytech:citrine"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " i ",
+    "i#i",
+    " i "
+  ],
+  "result": {
+    "item": "simplytech:eight_ball",
+    "count": 2
+  }
+}

@@ -1,6 +1,7 @@
 package com.example.simplytech.item;
 
 import com.example.simplytech.SimplyTech;
+import com.example.simplytech.item.custom.EightBallItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +16,9 @@ public class Moditems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SIMPLY_TECH)));
     public static final RegistryObject<Item> RAW_CITRINE = ITEMS.register("raw_citrine",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TAB_SIMPLY_TECH)));
+
+    public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
+            () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.TAB_SIMPLY_TECH).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
