@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 60,
+  "experience": 0.3,
+  "group": "citrine",
+  "ingredient": {
+    "item": "simplytech:raw_citrine"
+},
+  "result": "simplytech:citrine"
+}
