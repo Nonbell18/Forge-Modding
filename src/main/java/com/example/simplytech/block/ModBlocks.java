@@ -1,6 +1,7 @@
 package com.example.simplytech.block;
 
 import com.example.simplytech.SimplyTech;
+import com.example.simplytech.block.custom.JumpBlock;
 import com.example.simplytech.item.ModCreativeModeTab;
 import com.example.simplytech.item.Moditems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -40,6 +41,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModeTab.TAB_SIMPLY_TECH);
 
+
+    public static final RegistryObject<Block> JUMP_BLOCK = registerblock("jump_block",
+            () -> new JumpBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TAB_SIMPLY_TECH);
     private static <T extends Block> RegistryObject<T> registerblock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
